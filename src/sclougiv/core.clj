@@ -4,8 +4,6 @@
 
 ;;midje
 
-
-  
   (def b (start :firefox "https://github.com"))
 
   (-> b
@@ -15,6 +13,5 @@
   (fact (let [testvardet (-> b
 			   (find-it {:xpath "//a[text()='Blog']"}))]
 	  (count (list testvardet)) => 1
-	(count (list testvardet)) => 2))
+	  (count (list testvardet)) => 2))
 
-;;(count (list (-> b (find-it {:xpath "//a[text()='Blog']"}))))
